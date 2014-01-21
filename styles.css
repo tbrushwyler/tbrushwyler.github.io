@@ -1,0 +1,96 @@
+body {
+	margin: 0;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+a:visited {
+	color: #888;
+}
+
+.container {
+	width: 100%;
+	font-size: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+@media only screen and (min-width: 960px) {
+	.container {
+		width: 960px;
+	}
+}
+
+.half-screen {
+	width: 50%;
+	font-size: 18px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.item {
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.link {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+.details {
+	font-size: 12px;
+}
+
+.header {
+	height: 60px;
+	line-height: 40px;
+	padding: 10px;
+	color: white;
+	margin-bottom: 10px;
+}
+
+.header h3 {
+	padding: 0;
+	margin: 0;
+	font-weight: 200;
+}
+
+.header a:visited {
+	color: white;
+}
+
+.hacker-news .header {
+	background-color: #FF8937;
+}
+
+.designer-news .header {
+	background-color: #2D72D9;
+}
+.designer-news .header img {
+	float: right;
+	height: 60px;
+	margin-top: -10px;
+	margin-right: -10px;
+}
+
+.hacker-news .details a {
+	color: #FF8916;
+}
+
+.designer-news .details a {
+	color : #2D72D9;
+}

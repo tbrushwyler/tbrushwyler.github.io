@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Welcome</title>
+		<link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+		<script src="http://d7xe6yl2ckrgs.cloudfront.net/js/3/importio.js"></script>
+	</head>
+	<body ng-app="app">
+		<div class="container">
+			<div class="half-screen hacker-news" ng-controller="HNCtrl">
+				<div class="header">
+					<h3><a href="http://news.ycombinator.com">Hacker News</a></h3>
+				</div>
+				<div class="item" ng-repeat="item in items">
+					<a class="link" href="{{ item.link.href }}">{{ item.link.text }}</a>
+					<div class="details">
+						<a href="{{ item.details.href }}">{{ item.details.text }}</a>
+					</div>
+				</div>
+			</div>
+			<div class="half-screen designer-news" ng-controller="DNCtrl">
+				<div class="header">
+					<img src="dn.png" />
+					<h3>Designer News</h3>
+				</div>
+				<div class="item" ng-repeat="item in items">
+					<a class="link" href="{{ item.data.link._value }}">{{ item.data.link._text }}</a>
+					<div class="details">
+						<a href="{{ item.data.details._value }}">{{ item.data.details._text }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="angular-resource.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="HNCtrl.js"></script>
+		<script type="text/javascript" src="DNCtrl.js"></script>
+		<script type="text/javascript">
+			importio.init({
+			  "auth": {
+			    "userGuid": "031b284c-88d4-417d-84bd-daeec04bb914",
+			    "apiKey": "q0/mWeeGaa7sIRysTG9d2eERfuWbHSJFR12A/s/LOMJtqt32SNeRFFBRDFxENEfxlyxQB/4ckFP8goBGyn2xXQ==",
+			  },
+			  "host": "import.io"
+			  });
+		</script>
+	</body>
+</html>
