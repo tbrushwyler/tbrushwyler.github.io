@@ -95,10 +95,14 @@ a {
 	margin-right: -10px;
 }
 
-.hacker-news .details a {
+.hacker-news .details,
+.hacker-news .details a,
+.hacker-news .details a:visited {
 	color: #FF8916;
 }
 
-.designer-news .details a {
+.designer-news .details,
+.designer-news .details a,
+.designer-news .details a:visited {
 	color : #2D72D9;
 }

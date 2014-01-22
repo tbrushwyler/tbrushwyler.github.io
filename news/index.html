@@ -3,7 +3,6 @@
 		<title>Welcome</title>
 		<link rel="stylesheet" href="styles.css">
 		<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
-		<script src="http://d7xe6yl2ckrgs.cloudfront.net/js/3/importio.js"></script>
 	</head>
 	<body ng-app="app">
 		<div class="container">
@@ -13,9 +12,13 @@
 					<h3><a href="http://news.ycombinator.com">Hacker News</a></h3>
 				</div>
 				<div class="item" ng-repeat="item in items">
-					<a class="link" href="{{ item.link.href }}">{{ item.link.text }}</a>
+					<a class="link" href="{{ item.url }}">{{ item.title }}</a>
 					<div class="details">
-						<a href="{{ item.details.href }}">{{ item.details.text }}</a>
+						<span>{{ item.points }} points &#8226;
+							<a href="https://news.ycombinator.com/item?id={{item.id}}">{{ item.commentCount }} comments</a>
+							 &#8226; posted {{ item.postedAgo }} by 
+							<a href="https://news.ycombinator.com/user?id={{item.postedBy}}">{{ item.postedBy }}</a>
+						</span>
 					</div>
 				</div>
 			</div>
@@ -25,9 +28,12 @@
 					<h3><a href="http://news.layervault.com">Designer News</a></h3>
 				</div>
 				<div class="item" ng-repeat="item in items">
-					<a class="link" href="{{ item.data.link._value }}">{{ item.data.link._text }}</a>
+					<a class="link" href="{{ item.url }}">{{ item.title }}</a>
 					<div class="details">
-						<a href="{{ item.data.details._value }}">{{ item.data.details._text }}</a>
+						<span>{{ item.vote_count }} votes &#8226;
+							<a href="#">{{ item.num_comments }} comments</a>
+							 &#8226; posted {{ item.created_at | date:'short' }} by 
+							<a href="#">{{ item.submitter_display_name }}</a>
 					</div>
 				</div>
 			</div>
@@ -37,14 +43,5 @@
 		<script type="text/javascript" src="app.js"></script>
 		<script type="text/javascript" src="HNCtrl.js"></script>
 		<script type="text/javascript" src="DNCtrl.js"></script>
-		<script type="text/javascript">
-			importio.init({
-			  "auth": {
-			    "userGuid": "031b284c-88d4-417d-84bd-daeec04bb914",
-			    "apiKey": "q0/mWeeGaa7sIRysTG9d2eERfuWbHSJFR12A/s/LOMJtqt32SNeRFFBRDFxENEfxlyxQB/4ckFP8goBGyn2xXQ==",
-			  },
-			  "host": "import.io"
-			  });
-		</script>
 	</body>
 </html>
