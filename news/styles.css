@@ -7,13 +7,15 @@ body {
 * {
 	box-sizing: border-box;
 }
-
 a {
 	text-decoration: none;
+	color: white;
+}
+.item a {
 	color: #333;
 }
 
-a:visited {
+.item a:visited {
 	color: #888;
 }
 
@@ -60,7 +62,6 @@ a:visited {
 	line-height: 40px;
 	padding: 10px;
 	color: white;
-	margin-bottom: 10px;
 }
 
 .header h3 {
@@ -75,6 +76,13 @@ a:visited {
 
 .hacker-news .header {
 	background-color: #FF8937;
+}
+
+.hacker-news .header img {
+	float: left;
+}
+.hacker-news .header h3 {
+	margin-left: 50px;
 }
 
 .designer-news .header {

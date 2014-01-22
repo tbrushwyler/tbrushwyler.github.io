@@ -9,6 +9,7 @@
 		<div class="container">
 			<div class="half-screen hacker-news" ng-controller="HNCtrl">
 				<div class="header">
+					<img src="hn.png" />
 					<h3><a href="http://news.ycombinator.com">Hacker News</a></h3>
 				</div>
 				<div class="item" ng-repeat="item in items">
@@ -21,7 +22,7 @@
 			<div class="half-screen designer-news" ng-controller="DNCtrl">
 				<div class="header">
 					<img src="dn.png" />
-					<h3>Designer News</h3>
+					<h3><a href="http://news.layervault.com">Designer News</a></h3>
 				</div>
 				<div class="item" ng-repeat="item in items">
 					<a class="link" href="{{ item.data.link._value }}">{{ item.data.link._text }}</a>
