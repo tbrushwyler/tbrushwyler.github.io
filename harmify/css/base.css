@@ -46,10 +46,12 @@ body {
 	display: inline-block;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	position: absolute;
+	right: 75px;
+	top: 73px;
 	text-align: center;
 	float: right;
 	height: 154px;
-	margin-top: 23px;
 }
 .gauge .num-display h1 {
 	font-size: 72px;
