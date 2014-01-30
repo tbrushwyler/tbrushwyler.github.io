@@ -46,12 +46,13 @@ html, body {
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: contain;
+	width: 140px;
 }
 .gauge.milk .img {
-	background-image: url(img/milk.png);
+	background-image: url(../img/milk.png);
 }
 .gauge.egg .img {
-	background-image: url(img/egg.png);
+	background-image: url(../img/egg.png);
 }
 .gauge .num-display {
 	border-radius: 10px;
