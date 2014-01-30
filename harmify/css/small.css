@@ -1,6 +1,6 @@
 @media screen and (max-device-width: 480px){
     /*--- iPhone only CSS here ---*/
-    .navbar-inverse {
+    .navbar.navbar-inverse {
     	height: 50px;
     }
 
@@ -17,8 +17,7 @@
 
 	.gauge .img {
 		height: 100px;
-		position: relative;
-		background-repeat: no-repeat;
+		width: 70px;
 	}
 
 	.gauge .num-display {
@@ -35,6 +34,10 @@
 	.gauge .num-display h2 {
 		font-size: 16px;
 		font-weight: 200;
+	}
+
+	.gauge.add h1 {
+		font-size: 82px;
 	}
 
 }
