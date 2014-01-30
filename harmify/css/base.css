@@ -36,8 +36,25 @@ body {
 	padding: 50px 60px;
 }
 
-.gauge img {
+.gauge.add h1 {
+	font-size: 164px;
+	margin: 0;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+}
+
+.gauge .img {
 	display: inline-block;
+	height: 200px;
+	position: relative;
+	background-repeat: no-repeat;
+}
+.gauge.milk .img {
+	background-image: url(img/milk.png);
+}
+.gauge.egg .img {
+	background-image: url(img/egg.png);
 }
 .gauge .num-display {
 	border-radius: 10px;
