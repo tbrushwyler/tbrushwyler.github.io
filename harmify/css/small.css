@@ -1,0 +1,40 @@
+@media screen and (max-device-width: 480px){
+    /*--- iPhone only CSS here ---*/
+    .navbar-inverse {
+    	height: 50px;
+    }
+
+    .navbar-brand {
+		font-size: 36px;
+		line-height: 50px;
+    }
+
+	.gauge {
+		height: 150px;
+		margin-bottom: 10px;
+		padding: 25px 30px;
+	}
+
+	.gauge .img {
+		height: 100px;
+		position: relative;
+		background-repeat: no-repeat;
+	}
+
+	.gauge .num-display {
+		width: 80px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		right: 40px;
+		top: 36px;
+		height: 77px;
+	}
+	.gauge .num-display h1 {
+		font-size: 36px;
+	}
+	.gauge .num-display h2 {
+		font-size: 16px;
+		font-weight: 200;
+	}
+
+}
