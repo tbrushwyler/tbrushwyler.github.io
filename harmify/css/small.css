@@ -5,7 +5,7 @@
     }
 
     .navbar-brand {
-		font-size: 36px;
+		font-size: 32px;
 		line-height: 50px;
     }
 
@@ -13,6 +13,7 @@
 		height: 150px;
 		margin-bottom: 10px;
 		padding: 25px 30px;
+		border-radius: 5px;
 	}
 
 	.gauge .img {
@@ -27,6 +28,7 @@
 		right: 40px;
 		top: 36px;
 		height: 77px;
+		border-radius: 5px;
 	}
 	.gauge .num-display h1 {
 		font-size: 36px;
