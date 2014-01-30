@@ -1,0 +1,70 @@
+html {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif!important; 
+   font-weight: 300!important;
+}
+
+.navbar.navbar-inverse {
+	background-color: #34495E!important;
+	height: 100px;
+}
+
+.navbar-brand {
+	color: white!important;
+	font-weight: bold;
+	font-size: 72px;
+	line-height: 100px;
+	vertical-align: middle;
+	padding-top: 0;
+}
+
+body {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	background-color: #1A85BA;
+}
+
+.gauge {
+	background-color: #34495E;
+	border-radius: 10px;
+	height: 300px;
+	margin-bottom: 20px;
+	padding: 50px 60px;
+}
+
+.gauge img {
+	display: inline-block;
+}
+.gauge .num-display {
+	border-radius: 10px;
+	width: 160px;
+	color: white;
+	display: inline-block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	float: right;
+	height: 154px;
+	margin-top: 23px;
+}
+.gauge .num-display h1 {
+	font-size: 72px;
+	margin: 0;
+}
+.gauge .num-display h2 {
+	font-size: 32px;
+	margin: 0;
+	font-weight: 200;
+}
+
+.gauge.milk .num-display {	
+	background-color: rgba(221, 62, 118, 0.9);
+}
+
+.gauge.egg .num-display {
+	background-color: rgba(39, 197, 0, 0.7);
+}
