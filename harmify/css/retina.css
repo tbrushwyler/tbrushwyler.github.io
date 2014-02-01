@@ -1,0 +1,15 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+	
+	.milk.img {
+		background-image: url(../img/milk@2x.png);
+		-webkit-mask-image: url(../img/milk_mask@2x.png);
+	}
+	.egg.img {
+		background-image: url(../img/egg@2x.png);
+		-webkit-mask-image: url(../img/egg_mask@2x.png);
+	}
+
+}

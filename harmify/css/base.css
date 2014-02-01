@@ -66,32 +66,31 @@ html, body {
 	color: white;
 }
 
-.gauge .img {
+.img {
 	width: 140px;
 	height: 200px;
 	display: inline-block;
-	/*height: 200px;*/
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: contain;
-	/*width: 140px;*/
 	background-position: top left;
 	-webkit-mask-size: 140px 200px;
 }
-.gauge.milk .img {
+.milk.img {
 	background-image: url(../img/milk.png);
 	-webkit-mask-image: url(../img/milk_mask.png);
 }
-.gauge.egg .img {
+.egg.img {
 	background-image: url(../img/egg.png);
 	-webkit-mask-image: url(../img/egg_mask.png);
 }
-.gauge .img .fill {
+.img .fill {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	background-color: white;
+	transition: height 0.5s;
 }
 
 .gauge .num-display {
