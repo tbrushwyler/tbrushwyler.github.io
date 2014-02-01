@@ -1,0 +1,27 @@
+body {
+	display: table;
+}
+
+.container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.login-form {
+	background-color: #34495E;
+	border-radius: 10px;
+	text-align: center;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.login-form>* {
+	text-align: left;
+}
+
+.login-form .img {
+	width: 140px;
+	margin-left: auto;
+	margin-right: auto;
+}

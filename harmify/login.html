@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+	<head>
+		<title>Harmify</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/small.css">
+		<link rel="stylesheet" href="css/retina.css">
+		<link rel="stylesheet" href="css/login.css">
+	</head>
+	<body>
+		<div class="container" ng-controller="LoginCtrl">
+			<div class="row">
+				<div class="col-sm-2 col-sm-3 col-md-4"></div>
+				<div class="col-sm-8 col-sm-6 col-md-4">
+					<form class="login-form" ng-submit="login()" name="form">
+						<div class="img milk">
+							<div class="fill" style="height: {{ percent }}%;"></div>
+						</div>
+						<div class="row">
+							<div class="col-xs-1"></div>
+							<div class="form-group col-xs-10">
+								<label for="email" class="control-label">Email</label>
+								<input type="email" id="email" ng-model="f.Email" name="email" class="form-control" autofocus required />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-1"></div>
+							<div class="form-group col-xs-10">
+								<label for="password" class="control-label">Password</label>
+								<input type="password" id="password" ng-model="f.Password" name="password" class="form-control" required />
+							</div>
+						</div>
+						<div class="row" ng-show="registering">
+							<div class="col-xs-1"></div>
+							<div class="form-group col-xs-10">
+								<label for="confirm" class="control-label">Confirm Password</label>
+								<input type="password" id="confirm" ng-model="f.ConfirmPassword" name="confirm" class="form-control" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-1"></div>
+							<div class="col-xs-5">
+								<label>&nbsp;</label>
+								<button id="register" class="btn btn-default form-control" ng-click="register()" ng-disabled="registering && f.Password !== f.ConfirmPassword">Register</button>
+							</div>
+							<div class="col-xs-5">
+								<label>&nbsp;</label>
+								<input type="submit" class="btn btn-primary form-control" value="Login" ng-hide="registering" ng-disabled="!form.$valid" />
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/LoginCtrl.js"></script>
+	</body>
+</html>
