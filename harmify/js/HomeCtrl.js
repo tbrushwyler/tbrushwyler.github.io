@@ -18,24 +18,22 @@ app.controller("HomeCtrl", ['$scope', function($scope) {
 		$scope.devices.push(device);
 
 		dweetio.get_latest_dweet_for(deviceId, function(err, dweets) {
-			$scope.updateAtIndex(index, dweets[0]);
+			$scope.update(device, dweets[0]);
 		});
 
-		dweetio.listen_for(deviceId, function(d) {
-			$scope.updateAtIndex(index, d);
+		dweetio.listen_for(deviceId, function(dweet) {
+			$scope.update(device, dweet);
 		});
 
 		$scope.adding = false;
 		$scope.f = {};
 	};
 
-	$scope.updateAtIndex = function(index, dweet) {
-		var dev = $scope.devices[index];
-
-		dev.Type = dweet.content.Type;
-		dev.Value = dweet.content.Value;
-		dev.Units = dweet.content.Units;
-		dev.MaxValue = dweet.content.MaxValue;
+	$scope.update = function(device, dweet) {
+		device.Type = dweet.content.Type;
+		device.Value = dweet.content.Value;
+		device.Units = dweet.content.Units;
+		device.MaxValue = dweet.content.MaxValue;
 
 		$scope.$apply();
 	}
@@ -43,11 +41,11 @@ app.controller("HomeCtrl", ['$scope', function($scope) {
 	$scope.init = function() {
 		$.each($scope.devices, function(i, device) {
 			dweetio.get_latest_dweet_for(device.DeviceId, function(err, dweets) {
-				$scope.updateAtIndex(i, dweets[0]);
+				$scope.update(device, dweets[0]);
 			});
 
 			dweetio.listen_for(device.DeviceId, function(d) {
-				$scope.updateAtIndex(i, d);
+				$scope.update(device, d);
 			});
 		});
 	}
