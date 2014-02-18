@@ -45,6 +45,10 @@ app.controller("HomeCtrl", ['$scope', function($scope) {
 			dweetio.get_latest_dweet_for(device.DeviceId, function(err, dweets) {
 				$scope.updateAtIndex(i, dweets[0]);
 			});
+
+			dweetio.listen_for(device.DeviceId, function(d) {
+				$scope.updateAtIndex(i, d);
+			});
 		});
 	}
 
