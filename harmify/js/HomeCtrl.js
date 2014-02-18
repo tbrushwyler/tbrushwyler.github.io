@@ -3,7 +3,10 @@
 app.controller("HomeCtrl", ['$scope', function($scope) {
 	$scope.f = {};
 	$scope.adding = false;
-	$scope.devices = [];
+	$scope.devices = [
+		{ DeviceId: 'harmify-milk-test' },
+		{ DeviceId: 'harmify-egg-test' }
+	];
 
 	$scope.addDevice = function() {
 		var deviceId = $scope.f.DeviceId;
@@ -36,4 +39,19 @@ app.controller("HomeCtrl", ['$scope', function($scope) {
 
 		$scope.$apply();
 	}
+
+	$scope.init = function() {
+		$.each($scope.devices, function(i, device) {
+			dweetio.get_latest_dweet_for(device.DeviceId, function(err, dweets) {
+				$scope.updateAtIndex(i, dweets[0]);
+			});
+
+			dweetio.listen_for(device.DeviceId, function(d) {
+				$scope.updateAtIndex(i, d);
+			});
+		});
+	}
+
+	$scope.init();
+
 }]);
